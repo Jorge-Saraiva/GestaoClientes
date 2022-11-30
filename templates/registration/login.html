@@ -1,0 +1,24 @@
+{% extends 'registration/base.html' %}
+{% load bootstrap %}
+
+{% block title %}
+Página de login
+{% endblock %}
+
+{% block content %}
+<div class="col-12">
+    <h2>Login</h2>
+      <form method="post" class="" action="">
+          {% csrf_token %}
+          {{ form|bootstrap }}
+        <h4>
+            <button class="badge bg-warning btn mt-4" type="submit">Entrar</button>
+        </h4>
+        <p>
+            usuario: usuario_teste</br>
+            Senha: teste123456
+        </p>
+      </form>
+</div>
+
+{% endblock %}
